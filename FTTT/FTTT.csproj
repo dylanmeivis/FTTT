@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Dylan Meivis</Authors>
+    <Description>.net core wrapper to make your code more readable and better looking. 😎</Description>
+    <RepositoryUrl>https://github.com/dylanmeivis/FTTT</RepositoryUrl>
+    <RepositoryType>public</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
 </Project>
