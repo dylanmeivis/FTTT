@@ -1,40 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace FTTT
 {
     public static class First
     {
-        public static That<T> This<T>(Func<T> v, out T result)
+        public static async Task<T> This<T>(Task<T> callBack)
         {
-            result = v();
-            return new That<T>
-            {
-                Result = v()
-            };
-        }
-
-        public static That<T> This<T>(T v, out T result)
-        {
-            result = v;
-            return new That<T>
-            {
-                Result = v
-            };
-        }
-
-        public static That<T> This<T>(Func<T> v)
-        {
-            return new That<T>
-            {
-                Result = v()
-            };
-        }
-        public static That<T> This<T>(T v)
-        {
-            return new That<T>
-            {
-                Result = v
-            };
+            var returnValue = await callBack;
+            return returnValue;
         }
     }
 }
